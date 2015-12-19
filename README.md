@@ -1,0 +1,56 @@
+# Timings2 To Toggl
+
+Python script to convert the exported CSV from Timing2 to the correct format for Toggl.
+
+
+_FROM:_
+```csv
+Client, Project, Subproject, Start, End, Notes, Duration, Duration (Decimal), Cost, Kind, User
+```
+
+
+_TO:_
+```csv
+Email, Client, Project, Task, Description, Billable, Start date, Start time, Duration, Tags
+```
+
+## Steps
+
+1. Export all the entities you wish to import from Timings2. **Shortcut: `⌘-E`.**
+![timings2-to-toggle-1](https://dl.dropboxusercontent.com/u/73676286/GitHub/timings2-to-toggle-1.png)
+
+2. Execute the script passing the exported file and your email. _Like this:_
+```python
+python main.py /Users/rec/Desktop/Export.csv espinosacurbelo@gmail.com
+```
+
+3. Go to Toggl "_Import and Export_" page.
+![timings2-to-toggle-2](https://dl.dropboxusercontent.com/u/73676286/GitHub/timings2-to-toggle-2.png)
+
+4. Click the CSV Import and submit the converted file.
+![timings2-to-toggle3](https://dl.dropboxusercontent.com/u/73676286/GitHub/timings2-to-toggle-3.png)
+
+
+## LICENSE
+
+The MIT License (MIT)
+
+Copyright (c) 2015 Rodrigo Espinosa
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
